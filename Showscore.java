@@ -20,6 +20,7 @@ public class Showscore extends World
         addObject(new Playagain(),702,477);
         addObject(new Score(),550,218);
         addNumber();
+        playSound();
     }
     
     public void addNumber(){
@@ -44,5 +45,8 @@ public class Showscore extends World
         addObject(new Number(number[WorldHard.score%10]),903,218);
         WorldHard.score = 0;
     }
+    }
+    public void playSound(){
+        Greenfoot.playSound("gameover.wav");
     }
 }

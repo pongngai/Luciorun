@@ -33,6 +33,7 @@ public class WorldEasy extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 577, 1);
         addObject(new Lucio(),70,395);
+        addObject(new Back1(), 59, 552);
         for(int i = 0; i < 3; ++i)
             lifes.addLast(new Life());
             
@@ -74,8 +75,8 @@ public class WorldEasy extends World
         rocket = 0 ;
     }
     
-    showText(" Time : "+time,getWidth()/2,32);
-    showText(" Score : "+score,975,30);
+    showText(" Time : "+time,getWidth()/2+15,32);
+    showText(" Score : "+score,950,30);
     i++;
     if(i==80){
         time--;

@@ -20,7 +20,7 @@ public class Select extends World
         addObject(new Hard(),693,91);
         addObject(new Normal(),694,281);
         addObject(new Easy(),695,480);
-        addObject(new Back(), 953, 58);
         WorldEasy.score = 0;
+        addObject(new Back(),954,59);
     }
 }

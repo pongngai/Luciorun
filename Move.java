@@ -49,6 +49,7 @@ public class Move extends Actor
     
     private boolean atBottom()
     {
+       
         return getY() >= getWorld().getHeight() - 2;
     }
     
