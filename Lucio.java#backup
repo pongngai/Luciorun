@@ -1,0 +1,106 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Write a description of class Lucio here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Lucio extends Move
+{
+    /**
+     * Act - do whatever the Lucio wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public static int a = 2;
+    public boolean isKeyDown = false;
+    public int cooldown = 5;
+    
+    public void act() 
+    {
+        Movement();// Add your action code here.
+        checkFall();
+        Touch();
+    }
+    
+   
+    public void Movement(){
+        if (Greenfoot.isKeyDown("left") )
+        {
+            setImage("lucioback.png");
+            moveLeft();
+        }
+        if (Greenfoot.isKeyDown("right") )
+        {
+            setImage("lucioright.png");
+            moveRight();
+        }
+         if(Greenfoot.isKeyDown("up")){
+            if(onGround())
+            jump();
+        }
+        if(!isKeyDown&&Greenfoot.isKeyDown("space")){
+            a=6;
+            isKeyDown = true;
+            if(Greenfoot.isKeyDown("space")){
+                
+            }
+        }
+        if(isKeyDown&&!Greenfoot.isKeyDown("space")){
+            a = 2;
+            isKeyDown = false;
+        }
+       
+        }
+        
+        
+    public void jump(){
+        setV(-20);
+        fall();
+        }
+        
+    public void checkFall()
+    {
+        if (onGround()) {
+            setV(0);
+        }
+        else {
+            fall();
+        }
+        
+    }
+    
+    public void Touch(){
+        if(isTouching(Rocket.class)){
+            Rocket rocket = (Rocket) getOneIntersectingObject(Rocket.class);
+            if(rocket != null){
+                getWorld().removeObject(rocket);
+            }
+        }
+        
+        if(isTouching(Flag.class)){
+            Flag flag = (Flag) getOneIntersectingObject(Flag.class);
+            if(flag != null){
+                WorldEasy.score++;
+                WorldNormal.score1++;
+                WorldHard.score2++;
+                getWorld().removeObject(flag);
+            }
+            
+        }
+        
+         /*if(isTouching(Flag.class)){
+            Flag flag = (Flag) getOneIntersectingObject(Flag.class);
+            if(flag != null){
+                getWorld().removeObject(flag);
+            }
+            WorldNormal.score1++;
+   
+        }*/
+    }
+}
+    
+
+    
+    
+

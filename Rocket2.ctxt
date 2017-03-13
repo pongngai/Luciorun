@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Rocket2
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Rocket2\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ Movement()
+comment3.params=
+comment3.target=void\ atEdge()
+comment4.params=
+comment4.target=void\ Changepic()
+numComments=5
