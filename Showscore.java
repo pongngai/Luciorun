@@ -23,6 +23,7 @@ public class Showscore extends World
         playSound();
     }
     
+    
     public void addNumber(){
         if(WorldEasy.sym == 1){
         if(WorldEasy.score/10!=0){
@@ -49,4 +50,5 @@ public class Showscore extends World
     public void playSound(){
         Greenfoot.playSound("gameover.wav");
     }
+    
 }

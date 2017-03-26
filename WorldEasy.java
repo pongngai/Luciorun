@@ -28,12 +28,14 @@ public class WorldEasy extends World
     public static int score = 0;
     LinkedList<Life> lifes = new LinkedList<>();
     int flag=0;
+    private GreenfootSound bgSound;
     public WorldEasy()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 577, 1);
         addObject(new Lucio(),70,395);
         addObject(new Back1(), 59, 552);
+        bgSound = new GreenfootSound("song.mp3");
         for(int i = 0; i < 3; ++i)
             lifes.addLast(new Life());
             
@@ -66,6 +68,7 @@ public class WorldEasy extends World
         
        // addFlag();
        score = 0;
+       start();
     }
     
     public void act(){
@@ -136,5 +139,13 @@ public class WorldEasy extends World
         }
         
         
+    }
+    
+    public void start(){
+        bgSound.playLoop();
+        bgSound.setVolume(25);
+    }
+    public void gameOver(){
+        bgSound.stop();
     }
 }

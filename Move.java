@@ -43,8 +43,9 @@ public class Move extends Actor
     {
         setLocation ( getX(), getY() + vSpeed);
         vSpeed = vSpeed + acceleration;
-        if ( atBottom() )
+        if ( atBottom() ){
             Greenfoot.setWorld(new Showscore());
+        }
     }
     
     private boolean atBottom()

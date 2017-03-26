@@ -20,6 +20,7 @@ public class Lucio extends Move
         Movement();// Add your action code here.
         checkFall();
         Touch();
+        
     }
     
    

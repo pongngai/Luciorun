@@ -17,6 +17,7 @@ public class WorldHard extends World
     int flag = 0;
     int life = 3;
     LinkedList<Life> lifes = new LinkedList<>();
+    private GreenfootSound bgSound3;
     /**
      * Constructor for objects of class WorldHard.
      * 
@@ -27,6 +28,7 @@ public class WorldHard extends World
         super(1024, 577, 1);
         score=0;
          addObject(new Back1(), 59, 552);
+         bgSound3 = new GreenfootSound("song.mp3");
          for(int i = 0; i < 3; ++i)
             lifes.addLast(new Life());
             
@@ -57,7 +59,7 @@ public class WorldHard extends World
          addObject(new Wall(),532,490);
          addObject(new Wall(),774,490);
          addObject(new Wall(),992,490);
-        
+        start();
     }
     
      public void act(){
@@ -126,5 +128,12 @@ public void addFlag(){
         } catch(Exception e){
             e.printStackTrace();
         }
+    }
+    public void start(){
+        bgSound3.playLoop();
+        bgSound3.setVolume(25);
+    }
+    public void gameOver(){
+        bgSound3.stop();
     }
 }
