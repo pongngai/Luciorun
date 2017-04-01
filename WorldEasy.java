@@ -68,7 +68,7 @@ public class WorldEasy extends World
         
        // addFlag();
        score = 0;
-       start();
+       //start();
     }
     
     public void act(){
@@ -141,11 +141,11 @@ public class WorldEasy extends World
         
     }
     
-    public void start(){
+    /*public void start(){
         bgSound.playLoop();
         bgSound.setVolume(25);
     }
     public void gameOver(){
         bgSound.stop();
-    }
+    }*/
 }

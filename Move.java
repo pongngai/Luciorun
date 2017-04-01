@@ -30,7 +30,7 @@ public class Move extends Actor
     
     public boolean onGround()
     {
-        Object under = getOneObjectAtOffset(0, getImage().getHeight()/2+5 , null);
+        Object under = getOneObjectAtOffset(0, getImage().getHeight()/2+5 ,Wall.class);
         return under != null;
     }
 

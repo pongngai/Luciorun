@@ -20,7 +20,7 @@ public class Lucio extends Move
         Movement();// Add your action code here.
         checkFall();
         Touch();
-        
+        Wrap();
     }
     
    
@@ -133,7 +133,14 @@ public class Lucio extends Move
     public void playSoundBomb(){
         Greenfoot.playSound("bomb.wav");
     }
-    
+    public void Wrap(){
+        if(getX()==0){
+            setLocation(1023,getY());
+        }
+        else if(getX()==1023){
+            setLocation(0,getY());
+        }
+    }
 }
     
 

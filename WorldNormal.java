@@ -71,7 +71,7 @@ public class WorldNormal extends World
             floor4+=100;
             floor5+=100;
         }
-        start();
+        //start();
     }
     
      public void act(){
@@ -143,11 +143,11 @@ public class WorldNormal extends World
         
         
     }
-    public void start(){
+    /*public void start(){
         bgSound2.playLoop();
         bgSound2.setVolume(25);
     }
     public void gameOver(){
         bgSound2.stop();
-    }
+    }*/
 }

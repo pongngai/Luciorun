@@ -59,7 +59,7 @@ public class WorldHard extends World
          addObject(new Wall(),532,490);
          addObject(new Wall(),774,490);
          addObject(new Wall(),992,490);
-        start();
+        //start();
     }
     
      public void act(){
@@ -129,11 +129,11 @@ public void addFlag(){
             e.printStackTrace();
         }
     }
-    public void start(){
+    /*public void start(){
         bgSound3.playLoop();
         bgSound3.setVolume(25);
     }
     public void gameOver(){
         bgSound3.stop();
-    }
+    }*/
 }
