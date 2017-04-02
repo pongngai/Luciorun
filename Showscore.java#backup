@@ -17,25 +17,42 @@ public class Showscore extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 577, 1);
+        WorldEasy.bgSound.stop();
+        WorldNormal.bgSound2.stop();
+        WorldHard.bgSound3.stop();
+        addObject(new Restart(),965,40);
         addObject(new Playagain(),702,477);
         addObject(new Score(),550,218);
         addNumber();
+        playSound();
     }
     
+    
     public void addNumber(){
+        if(WorldEasy.sym == 1){
         if(WorldEasy.score/10!=0){
            addObject(new Number(number[WorldEasy.score/10]),818,218);
         }
         addObject(new Number(number[WorldEasy.score%10]),903,218);
-        
-        if(WorldNormal.score1/10!=0){
+        WorldEasy.score = 0;
+    }
+        if(WorldNormal.sym == 2){
+        if(WorldNormal.score/10!=0){
            addObject(new Number(number[WorldNormal.score/10]),818,218);
         }
         addObject(new Number(number[WorldNormal.score%10]),903,218);
-        
-        if(WorldHard.score2/10!=0){
+        WorldNormal.score = 0;
+    }
+        if(WorldHard.sym == 3){
+        if(WorldHard.score/10!=0){
            addObject(new Number(number[WorldHard.score/10]),818,218);
         }
-        addObject(new Number(number[WorldHard.score2%10]),903,218);
+        addObject(new Number(number[WorldHard.score%10]),903,218);
+        WorldHard.score = 0;
     }
+    }
+    public void playSound(){
+        Greenfoot.playSound("gameover.wav");
+    }
+    
 }

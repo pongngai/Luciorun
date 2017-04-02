@@ -23,6 +23,7 @@ public class WorldNormal extends World
     int floor4 = 464;
     int floor5 = 879;
     int flag=0;
+    private GreenfootSound bgSound2;
     /**
      * Constructor for objects of class WorldNormal.
      * 
@@ -34,11 +35,9 @@ public class WorldNormal extends World
         addObject(new Lucio(),527,218);
          addObject(new Back1(), 59, 552);
          addObject(new Restart(),1000,560);
-         addObject(new sound(),200,30);
-         addObject(new mute(),275,30);
         score = 0;
         Restart.count = 2;
-        //bgSound2 = new GreenfootSound("song.mp3");
+        bgSound2 = new GreenfootSound("song.mp3");
         for(int i = 0; i < 3; ++i)
             lifes.addLast(new Life());
             
@@ -74,7 +73,7 @@ public class WorldNormal extends World
             floor4+=100;
             floor5+=100;
         }
-        start();
+        //start();
     }
     
      public void act(){
@@ -113,8 +112,8 @@ public class WorldNormal extends World
     }
     
     public void addFlag(){
-        flag = Greenfoot.getRandomNumber(700);
-        if(flag == 600){
+        flag++;
+        if(flag == 0){
         addObject(new Flag(),531,43);
         
         }
@@ -141,13 +140,16 @@ public class WorldNormal extends World
         
         if(flag == 500){
         addObject(new Flag(),995,451);    
-        //flag = 0;
+        flag = 0;
         }
         
         
     }
-    public void start(){
-        MyWorld.bgSound.playLoop();
-        MyWorld.bgSound.setVolume(25);
+    /*public void start(){
+        bgSound2.playLoop();
+        bgSound2.setVolume(25);
     }
+    public void gameOver(){
+        bgSound2.stop();
+    }*/
 }

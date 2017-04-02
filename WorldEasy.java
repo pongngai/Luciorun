@@ -28,14 +28,19 @@ public class WorldEasy extends World
     public static int score = 0;
     LinkedList<Life> lifes = new LinkedList<>();
     int flag=0;
-    private GreenfootSound bgSound;
+    //static GreenfootSound bgSound = new GreenfootSound("song.mp3");
     public WorldEasy()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 577, 1);
+        MyWorld.bgSound.playLoop();
+        MyWorld.bgSound.setVolume(25);
         addObject(new Lucio(),70,395);
         addObject(new Back1(), 59, 552);
-        bgSound = new GreenfootSound("song.mp3");
+        addObject(new Restart(),1000,560);
+        addObject(new sound(),200,30);
+        addObject(new mute(),275,30);
+        
         for(int i = 0; i < 3; ++i)
             lifes.addLast(new Life());
             
@@ -68,6 +73,7 @@ public class WorldEasy extends World
         
        // addFlag();
        score = 0;
+       Restart.count = 1;
        //start();
     }
     
@@ -87,6 +93,7 @@ public class WorldEasy extends World
     }
     if(time==0){
       Greenfoot.setWorld(new Showscore());
+      //bgSound.stop();
     }
     
     addFlag();
@@ -101,14 +108,15 @@ public class WorldEasy extends World
             life--;
             if(life == 0)
             Greenfoot.setWorld(new Showscore());
+            //bgSound.stop();
         } catch(Exception e){
             e.printStackTrace();
         }
     }
     
     public void addFlag(){
-        flag++;
-        if(flag == 0){
+        flag = Greenfoot.getRandomNumber(700);
+        if(flag == 600){
         addObject(new Flag(),36,200);
         
         }
@@ -119,7 +127,7 @@ public class WorldEasy extends World
         }
         
         if(flag == 100){
-        addObject(new Flag(),975,200);    
+        addObject(new Flag(),975,200);
         
         }
         
@@ -134,18 +142,15 @@ public class WorldEasy extends World
         }
         
         if(flag == 500){
-        addObject(new Flag(),988,424);    
-        flag = 0;
+        addObject(new Flag(),988,424);
+        //flag = 0;
         }
         
         
     }
     
-    /*public void start(){
-        bgSound.playLoop();
-        bgSound.setVolume(25);
+    public void start(){
+        MyWorld.bgSound.playLoop();
+        MyWorld.bgSound.setVolume(25);
     }
-    public void gameOver(){
-        bgSound.stop();
-    }*/
 }

@@ -17,18 +17,16 @@ public class WorldHard extends World
     int flag = 0;
     int life = 3;
     LinkedList<Life> lifes = new LinkedList<>();
-    private GreenfootSound bgSound3;
-    /**
-     * Constructor for objects of class WorldHard.
-     * 
-     */
     public WorldHard()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 577, 1);
         score=0;
+        Restart.count = 3;
          addObject(new Back1(), 59, 552);
-         bgSound3 = new GreenfootSound("song.mp3");
+         addObject(new Restart(),1000,560);
+         addObject(new sound(),200,30);
+         addObject(new mute(),275,30);
          for(int i = 0; i < 3; ++i)
             lifes.addLast(new Life());
             
@@ -59,7 +57,7 @@ public class WorldHard extends World
          addObject(new Wall(),532,490);
          addObject(new Wall(),774,490);
          addObject(new Wall(),992,490);
-        //start();
+        start();
     }
     
      public void act(){
@@ -83,8 +81,8 @@ public class WorldHard extends World
 }
 
 public void addFlag(){
-        flag++;
-        if(flag == 0){
+        flag = Greenfoot.getRandomNumber(1000);
+        if(flag ==600){
         addObject(new Flag(),994,433);
         
         }
@@ -102,16 +100,20 @@ public void addFlag(){
         if(flag == 400){
         addObject(new Flag(),779,233);
        
-        }
+        }   
         
         if(flag == 200){
         addObject(new Flag(),784,434); 
         
         }
+        if(flag == 700){
+        addObject(new Flag(),300,434); 
+        
+        }
         
         if(flag == 500){
         addObject(new Flag(),549,44);    
-        flag = 0;
+        //flag = 0;
         }
         
         
@@ -129,11 +131,8 @@ public void addFlag(){
             e.printStackTrace();
         }
     }
-    /*public void start(){
-        bgSound3.playLoop();
-        bgSound3.setVolume(25);
+    public void start(){
+        MyWorld.bgSound.playLoop();
+        MyWorld.bgSound.setVolume(25);
     }
-    public void gameOver(){
-        bgSound3.stop();
-    }*/
 }
