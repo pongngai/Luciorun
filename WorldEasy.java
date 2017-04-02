@@ -8,7 +8,7 @@ import java.util.LinkedList;
  */
 public class WorldEasy extends World
 {
-
+    
     /**
      * Constructor for objects of class WorldEasy.
      * 
@@ -27,7 +27,7 @@ public class WorldEasy extends World
     int floor6 = 406;
     public static int score = 0;
     LinkedList<Life> lifes = new LinkedList<>();
-    int flag=0;
+    int flag;
     //static GreenfootSound bgSound = new GreenfootSound("song.mp3");
     public WorldEasy()
     {    

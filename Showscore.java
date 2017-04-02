@@ -13,6 +13,7 @@ public class Showscore extends World
      * Constructor for objects of class Showscore.
      * 
      */
+    GreenfootImage name;
     public Showscore()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -22,6 +23,8 @@ public class Showscore extends World
         addObject(new Score(),550,218);
         addNumber();
         playSound();
+        showText(Select.Pname,500,50);
+        
     }
     
     
