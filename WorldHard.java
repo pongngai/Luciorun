@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.LinkedList;
+//import javax.swing.JOptionPane;
 /**
  * Write a description of class WorldHard here.
  * 
@@ -9,18 +10,20 @@ import java.util.LinkedList;
 public class WorldHard extends World
 {
     public static int sym = 3;
+    //static String n;
     int x = 36;
     int rocket = 0;
     int time = 120;
     int i = 0 ;
     public static int score = 0;
-    int flag = 0;
+    int flag;
     int life = 3;
     LinkedList<Life> lifes = new LinkedList<>();
     public WorldHard()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 577, 1);
+        //n=JOptionPane.showInputDialog("Enter your name :");
         score=0;
         Restart.count = 3;
          addObject(new Back1(), 59, 552);

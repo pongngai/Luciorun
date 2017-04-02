@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.LinkedList;
+//import javax.swing.JOptionPane;
 /**
  * Write a description of class WorldNormal here.
  * 
@@ -9,6 +10,7 @@ import java.util.LinkedList;
 public class WorldNormal extends World
 {
     public static int sym = 2;
+    //static String n;
     int life = 3;
     int x = 36;
     int rocket = 0;
@@ -22,7 +24,7 @@ public class WorldNormal extends World
     int floor3 = 48;
     int floor4 = 464;
     int floor5 = 879;
-    int flag=0;
+    int flag;
     /**
      * Constructor for objects of class WorldNormal.
      * 
@@ -31,6 +33,7 @@ public class WorldNormal extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 577, 1); 
+        //n=JOptionPane.showInputDialog("Enter your name :");
         addObject(new Lucio(),527,218);
          addObject(new Back1(), 59, 552);
          addObject(new Restart(),1000,560);
