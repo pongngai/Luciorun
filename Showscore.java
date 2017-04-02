@@ -18,7 +18,6 @@ public class Showscore extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 577, 1);
         MyWorld.bgSound.stop();
-        addObject(new Restart(),965,40);
         addObject(new Playagain(),702,477);
         addObject(new Score(),550,218);
         addNumber();

@@ -35,7 +35,7 @@ public class WorldNormal extends World
          addObject(new Back1(), 59, 552);
          addObject(new Restart(),1000,560);
          addObject(new sound(),200,30);
-         addObject(new mute(),275,30);
+         
         score = 0;
         Restart.count = 2;
         //bgSound2 = new GreenfootSound("song.mp3");

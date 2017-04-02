@@ -39,7 +39,7 @@ public class WorldEasy extends World
         addObject(new Back1(), 59, 552);
         addObject(new Restart(),1000,560);
         addObject(new sound(),200,30);
-        addObject(new mute(),275,30);
+        
         
         for(int i = 0; i < 3; ++i)
             lifes.addLast(new Life());
