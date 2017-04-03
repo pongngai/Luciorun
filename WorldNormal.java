@@ -9,7 +9,7 @@ import java.util.LinkedList;
  */
 public class WorldNormal extends World
 {
-    public static int sym = 2;
+    //public static int sym = 2;
     //static String n;
     int life = 3;
     int x = 36;
@@ -39,7 +39,7 @@ public class WorldNormal extends World
          addObject(new Back1(), 59, 552);
          addObject(new Restart(),1000,560);
          addObject(new sound(),200,30);
-         
+         Select.sym = 2;
         score = 0;
         Restart.count = 2;
         //bgSound2 = new GreenfootSound("song.mp3");

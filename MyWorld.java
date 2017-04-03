@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import javax.swing.JOptionPane;
 /**
  * Write a description of class MyWorld here.
  * 
@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
+    static String Pname;
 
     static GreenfootSound bgSound = new GreenfootSound("song.mp3");
     
@@ -18,5 +19,6 @@ public class MyWorld extends World
         addObject(new ss(),685,190);
         addObject(new Start(),511,445);
         addObject(new About(),841,444);
+        
     }
 }

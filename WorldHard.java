@@ -9,7 +9,7 @@ import java.util.LinkedList;
  */
 public class WorldHard extends World
 {
-    public static int sym = 3;
+    //public static int sym = 3;
     //static String n;
     int x = 36;
     int rocket = 0;
@@ -30,7 +30,7 @@ public class WorldHard extends World
          addObject(new Back1(), 59, 552);
          addObject(new Restart(),1000,560);
          addObject(new sound(),200,30);
-         
+         Select.sym = 3;
          for(int i = 0; i < 3; ++i)
             lifes.addLast(new Life());
             
