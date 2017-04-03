@@ -16,7 +16,7 @@ public class sound extends Actor
     boolean mute = false;
     public void act() 
     {
-        if(Greenfoot.mouseClicked(this)&&mute==false){
+        if(Greenfoot.mouseClicked(this)&&mute==false){//check sound turn on or off
            setImage(pic[1]);
            playSound();
            MyWorld.bgSound.setVolume(0);
@@ -29,7 +29,7 @@ public class sound extends Actor
            mute = false;
         }
     }
-    public void playSound(){
+    public void playSound(){//add sound press button
         Greenfoot.playSound("button-11.wav");
     }
 }

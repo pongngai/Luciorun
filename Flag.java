@@ -16,7 +16,7 @@ public class Flag extends Actor
      */
     public void act() 
     {
-        if(isTouching(Flag.class)){
+        if(isTouching(Flag.class)){// touch flag to remove
             removeTouching(Flag.class);
         }
         

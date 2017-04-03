@@ -22,7 +22,7 @@ public class Select extends World
         addObject(new Hard(),693,91);
         addObject(new Normal(),694,281);
         addObject(new Easy(),695,480);
-        WorldEasy.score = 0;
+        WorldEasy.score = 0;//reset score
         addObject(new Back(),954,59);
         message="";
     }

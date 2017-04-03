@@ -24,7 +24,7 @@ public class Lucio extends Move
     }
     
    
-    public void Movement(){
+    public void Movement(){//method press key for move
         if (Greenfoot.isKeyDown("left") )
         {
             setImage("lucioback.png");
@@ -83,7 +83,7 @@ public class Lucio extends Move
         
     }
     
-    public void Touch(){
+    public void Touch(){//touch rocket will remove rocket and life
         if(isTouching(Rocket.class)){
             playSoundBomb();
             Rocket rocket = (Rocket) getOneIntersectingObject(Rocket.class);
@@ -133,7 +133,7 @@ public class Lucio extends Move
     public void playSoundBomb(){
         Greenfoot.playSound("bomb.wav");
     }
-    public void Wrap(){
+    public void Wrap(){//method exit one side you will return to the world
         if(getX()==0){
             setLocation(1023,getY());
         }

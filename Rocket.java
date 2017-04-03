@@ -23,12 +23,12 @@ public class Rocket extends Actor
         
     }
     
-    public void Movement(){
+    public void Movement(){// speed of rocket
         setLocation(getX()-3,getY());
  
     }
     
-    public void Changepic(){
+    public void Changepic(){// change pic every a == 10,20,30
         a++;
         if(a==10){
             setImage("rocket1.png");
@@ -44,7 +44,7 @@ public class Rocket extends Actor
    
     }
 
-    public void Life(){
+    public void Life(){//method if touch lucio life will losing
         if(isTouching(Lucio.class)){
         ((WorldEasy)getWorld()).removeLife();
         
@@ -52,7 +52,7 @@ public class Rocket extends Actor
         }
 }
 
-public void atEdge(){
+public void atEdge(){//remove when at edge
     if(isAtEdge()){
         getWorld().removeObject(this);
     }

@@ -35,7 +35,7 @@ public class WorldHard extends World
             lifes.addLast(new Life());
             
              
-            for(Life l : lifes){
+            for(Life l : lifes){//loop for add Life
             addObject(l, x, 32);
             x += 42;
         }
@@ -84,7 +84,7 @@ public class WorldHard extends World
     addFlag();
 }
 
-public void addFlag(){
+public void addFlag(){//method add flag(random)
         flag = Greenfoot.getRandomNumber(1000);
         if(flag ==600){
         addObject(new Flag(),994,433);
@@ -123,7 +123,7 @@ public void addFlag(){
         
     }
     public void removeLife()
-    {
+    {//method remove Life class
         try{
             Life life_ = lifes.getLast();
             removeObject(life_);
@@ -135,7 +135,7 @@ public void addFlag(){
             e.printStackTrace();
         }
     }
-    public void start(){
+    public void start(){//method add to play sound
         MyWorld.bgSound.playLoop();
         MyWorld.bgSound.setVolume(25);
     }

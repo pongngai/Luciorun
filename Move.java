@@ -18,28 +18,28 @@ public class Move extends Actor
     private int vSpeed = 0;                         // current vertical speed
     
 
-    public void moveRight()
+    public void moveRight()//move right
     {
         setLocation ( getX() + speed, getY() );
     }
     
-    public void moveLeft()
+    public void moveLeft()//move left
     {
         setLocation ( getX() - speed, getY() );
     }
     
-    public boolean onGround()
+    public boolean onGround()//set lucio can walk on wall
     {
         Object under = getOneObjectAtOffset(0, getImage().getHeight()/2+5 ,Wall.class);
         return under != null;
     }
 
-    public void setV(int speed)
+    public void setV(int speed)//set speed
     {
         vSpeed = speed;
     }
     
-    public void fall()
+    public void fall()//set speed when fall
     {
         setLocation ( getX(), getY() + vSpeed);
         vSpeed = vSpeed + acceleration;
@@ -48,7 +48,7 @@ public class Move extends Actor
         }
     }
     
-    private boolean atBottom()
+    private boolean atBottom()//for check you at bottom
     {
        
         return getY() >= getWorld().getHeight() - 2;

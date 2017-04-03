@@ -21,11 +21,9 @@ public class Start extends Actor
            Greenfoot.setWorld(new Select());
            MyWorld.Pname=JOptionPane.showInputDialog("Enter your name :");
         }
-        
-        
     }    
     
-    public void playSound(){
+    public void playSound(){//add sound press button
         Greenfoot.playSound("button-11.wav");
     }
 }

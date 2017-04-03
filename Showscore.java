@@ -22,12 +22,12 @@ public class Showscore extends World
         addObject(new Playagain(),702,477);
         addObject(new Score(),550,218);
         addObject(new name(),600,50);
-        addObject(new Restart(),1000,320);
+        //addObject(new Restart(),1000,320);
         addNumber();
         playSound();
     }
     
-    public void addNumber(){
+    public void addNumber(){//method change score to picture
         if(Select.sym == 1){
         if(WorldEasy.score/10!=0){
            addObject(new Number(number[WorldEasy.score/10]),818,218);
@@ -50,7 +50,7 @@ public class Showscore extends World
         WorldHard.score = 0;
     }
     }
-    public void playSound(){
+    public void playSound(){//method add sound
         Greenfoot.playSound("gameover.wav");
     }
     

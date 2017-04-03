@@ -19,23 +19,23 @@ public class Restart extends Actor
     
     public void act() 
     {
-        if (Greenfoot.mouseClicked(this) && count==1) {
+        if (Greenfoot.mouseClicked(this) && count==1) {//reset world easy & score
             playSound();
             WorldEasy.score = 0;
             Greenfoot.setWorld(new WorldEasy());
         }
-        if (Greenfoot.mouseClicked(this) && count==2) {
+        if (Greenfoot.mouseClicked(this) && count==2) {//reset world normal & score
             playSound();
             WorldNormal.score = 0;
             Greenfoot.setWorld(new WorldNormal());
         }
-        if (Greenfoot.mouseClicked(this) && count==3) {
+        if (Greenfoot.mouseClicked(this) && count==3) {//reset world hard & score
             playSound();
             WorldHard.score = 0;
             Greenfoot.setWorld(new WorldHard());
         }
     }
-    public void playSound(){
+    public void playSound(){//add sound press button
         Greenfoot.playSound("button-11.wav");
     }
 }

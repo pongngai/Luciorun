@@ -46,7 +46,7 @@ public class WorldEasy extends World
         for(int i = 0; i < 3; ++i)
             lifes.addLast(new Life());
             
-            for(Life l : lifes){
+            for(Life l : lifes){//loop for add Life
             addObject(l, x, 32);
             x += 42;
         }
@@ -101,7 +101,7 @@ public class WorldEasy extends World
     addFlag();
     }
     
-    public void removeLife()
+    public void removeLife()//method for remove Life class
     {
         try{
             Life life_ = lifes.getLast();
@@ -116,7 +116,7 @@ public class WorldEasy extends World
         }
     }
     
-    public void addFlag(){
+    public void addFlag(){//method add flag
         flag = Greenfoot.getRandomNumber(700);
         if(flag == 600){
         addObject(new Flag(),36,200);
@@ -151,7 +151,7 @@ public class WorldEasy extends World
         
     }
     
-    public void start(){
+    public void start(){//method add sound 
         MyWorld.bgSound.playLoop();
         MyWorld.bgSound.setVolume(25);
     }
