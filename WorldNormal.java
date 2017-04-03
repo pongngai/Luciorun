@@ -25,6 +25,7 @@ public class WorldNormal extends World
     int floor4 = 464;
     int floor5 = 879;
     int flag;
+    
     /**
      * Constructor for objects of class WorldNormal.
      * 

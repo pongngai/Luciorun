@@ -28,6 +28,7 @@ public class WorldEasy extends World
     public static int score = 0;
     LinkedList<Life> lifes = new LinkedList<>();
     int flag;
+    
     //static GreenfootSound bgSound = new GreenfootSound("song.mp3");
     public WorldEasy()
     {    
@@ -37,7 +38,7 @@ public class WorldEasy extends World
         MyWorld.bgSound.setVolume(25);
         addObject(new Lucio(),70,395);
         addObject(new Back1(), 59, 552);
-        addObject(new Restart(),1000,560);
+        addObject(new Restart(),980,545);
         addObject(new sound(),200,30);
         
         

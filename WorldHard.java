@@ -19,6 +19,7 @@ public class WorldHard extends World
     int flag;
     int life = 3;
     LinkedList<Life> lifes = new LinkedList<>();
+   
     public WorldHard()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
