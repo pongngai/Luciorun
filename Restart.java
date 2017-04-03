@@ -34,7 +34,7 @@ public class Restart extends Actor
             WorldHard.score = 0;
             Greenfoot.setWorld(new WorldHard());
         }
-    }   
+    }
     public void playSound(){
         Greenfoot.playSound("button-11.wav");
     }

@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Showscore extends World
 {
-    String[]number = {"0.png","1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png",};
+    String[]number = {"0.png","1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png"};
     /**
      * Constructor for objects of class Showscore.
      * 
@@ -21,29 +21,29 @@ public class Showscore extends World
         MyWorld.bgSound.stop();
         addObject(new Playagain(),702,477);
         addObject(new Score(),550,218);
+        addObject(new name(),600,50);
         addNumber();
         playSound();
-        showText(Select.Pname,500,50);
-        name=new GreenfootImage(Space.message,48,Color.DARK_GRAY,Color.LIGHT_GRAY);
     }
     
     
     public void addNumber(){
-        if(WorldEasy.sym == 1){
+        //removeObjects(getObjects(Number.class));
+        if(Select.sym == 1){
         if(WorldEasy.score/10!=0){
            addObject(new Number(number[WorldEasy.score/10]),818,218);
         }
         addObject(new Number(number[WorldEasy.score%10]),903,218);
         WorldEasy.score = 0;
     }
-        if(WorldNormal.sym == 2){
+        if(Select.sym == 2){
         if(WorldNormal.score/10!=0){
            addObject(new Number(number[WorldNormal.score/10]),818,218);
         }
         addObject(new Number(number[WorldNormal.score%10]),903,218);
         WorldNormal.score = 0;
     }
-        if(WorldHard.sym == 3){
+        if(Select.sym == 3){
         if(WorldHard.score/10!=0){
            addObject(new Number(number[WorldHard.score/10]),818,218);
         }

@@ -13,7 +13,7 @@ public class WorldEasy extends World
      * Constructor for objects of class WorldEasy.
      * 
      */
-    public static int sym = 1;
+    //public static int sym = 1;
     int life = 3;
     int x = 36;
     int rocket = 0;
@@ -39,6 +39,7 @@ public class WorldEasy extends World
         addObject(new Back1(), 59, 552);
         addObject(new Restart(),1000,560);
         addObject(new sound(),200,30);
+        Select.sym = 1;
         
         
         for(int i = 0; i < 3; ++i)

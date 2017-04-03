@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import javax.swing.JOptionPane;
 /**
  * Write a description of class Start here.
  * 
@@ -19,6 +19,7 @@ public class Start extends Actor
            //setImage("startdown.png");
            playSound();
            Greenfoot.setWorld(new Select());
+           MyWorld.Pname=JOptionPane.showInputDialog("Enter your name :");
         }
         
         
